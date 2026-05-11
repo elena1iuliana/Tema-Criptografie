@@ -1,7 +1,6 @@
 import hashlib
 import random
 def sha256_hash(u1, u2, v):
-    """Funcție hash simplă pentru Cramer-Shoup"""
     data = f"{u1}{u2}{v}".encode()
     return int(hashlib.sha256(data).hexdigest(), 16)
 def cramer_shoup_keygen(p=4611686018427387847):
